@@ -1,2 +1,3 @@
-# ce_art_biblio
-Bibliometrics analysis of research on the cultural evolution of the arts
+# Cultural Evolution of the Arts
+
+Bibliometrics analysis of research on the cultural evolution of the arts.
