@@ -359,4 +359,4 @@ interactive_plot <- girafe(
     opts_tooltip(css = "font-family: Arial, Helvetica, sans-serif; font-style: bold; background-color: black; color: white; padding: 10px; border-radius: 10px")
   )
 )
-save_html(interactive_plot, file = "output/ce_art_biblio.html")
+save_html(interactive_plot, file = "docs/index.html")
