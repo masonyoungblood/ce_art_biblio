@@ -50,11 +50,21 @@ works[[2]] <- list(oa_fetch(entity = "works", identifier = "https://openalex.org
 works[[19]] <- list(oa_fetch(entity = "works", identifier = "https://openalex.org/W1972390081", output = "list"))
 works[[22]] <- list(oa_fetch(entity = "works", identifier = "https://openalex.org/W2097315895", output = "list"))
 
+#convert works into a data table that includes referenced works
+new_works_proc <- rbindlist(lapply(works, function(x){
+  data.table(
+    id = gsub("https://openalex.org/", "", x[[1]]$id),
+    type = x[[1]]$type,
+    title = stringr::str_to_sentence(x[[1]]$display_name),
+    year = x[[1]]$publication_year,
+    source = stringr::str_to_title(x[[1]]$primary_location$source$display_name),
+    authors = list(sapply(x[[1]]$authorships, function(y){y$author$display_name})),
+    references = list(gsub("https://openalex.org/", "", unlist(x[[1]]$referenced_works)))
+  )
+}), fill = TRUE)
+
 #load in old works file and combine
-new_works <- works
 load("data/works.RData")
-works <- c(works, new_works)
-rm(new_works)
 
 #convert works into a data table that includes referenced works
 works_proc <- rbindlist(lapply(works, function(x){
@@ -68,6 +78,9 @@ works_proc <- rbindlist(lapply(works, function(x){
     references = list(gsub("https://openalex.org/", "", unlist(x$referenced_works)))
   )
 }), fill = TRUE)
+
+#concatentate
+works_proc <- rbindlist(list(works_proc, new_works_proc))
 
 #get rid of duplicates
 works_proc <- works_proc[-which(duplicated(works_proc$id))]
