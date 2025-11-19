@@ -2,7 +2,7 @@
 
 This repository contains a bibliometric analysis of research on the cultural evolution of the arts, conducted in collaboration with [Oleg Sobchuk](https://www.sobch.uk/). Here is a co-citation network and a table with the top 20 most cited papers.
 
-![network](ce_art_biblio.png)
+![network](output/ce_art_biblio.png)
 
 |Citations|Reference                                                                                                                                                           |
 |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
