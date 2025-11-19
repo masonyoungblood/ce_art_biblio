@@ -103,7 +103,7 @@ layout_df$label <- paste0(
       return(last(strsplit(x[1], " ")[[1]]))
     }
     if(length(x) == 2){
-      return(paste0(last(strsplit(x[1], " ")[[1]]), " and ", last(strsplit(x[1], " ")[[1]])))
+      return(paste0(last(strsplit(x[1], " ")[[1]]), " and ", last(strsplit(x[2], " ")[[1]])))
     }
     if(length(x) > 2){
       return(paste0(last(strsplit(x[1], " ")[[1]]), " et al."))
