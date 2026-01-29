@@ -49,13 +49,12 @@ Sara Graça da Silva (2016). Comparative phylogenetic analyses uncover the ancie
 Christopher J. Howe (2011). Phylomemetics—evolutionary analysis beyond the gene. Plos Biology.
 Robert M. Ross (2015). Folktale transmission in the arctic provides evidence for high bandwidth social learning among hunter–gatherer groups. Evolution And Human Behavior.
 Robert M. Ross (2013). Population structure and cultural geography of a folktale in europe. Proceedings Of The Royal Society B Biological Sciences.
+Eric Schniter (2017). Information transmission and the oral tradition: evidence of a late-life service niche for tsimane amerindians. Evolution And Human Behavior.
 Jamshid J. Tehrani (2015). Oral fairy tale or literary fake? Investigating the origins of<i>little red riding hood</i>using phylogenetic network analysis. Digital Scholarship In The Humanities.
 Jamshid J. Tehrani (2013). The phylogeny of little red riding hood. Plos One.
-Gabriel Aguirre‐Fernández (2021). Cultural macroevolution of musical instruments in south america. Humanities And Social Sciences Communications.
 Chris Buckley (2012). Investigating cultural evolution using phylogenetic analysis: the origins and descent of the southeast asian tradition of warp ikat weaving. Plos One.
 Julien d’Huy (2012). Un ours dans les étoiles, recherche phylogénétique sur un mythe préhistorique.. Hal (Le Centre Pour La Communication Scientifique Directe).
 Sylvie Le Bomin (2016). The evolution of musical diversity: the key role of vertical transmission. Plos One.
-Cecilia Padilla‐Iglesias (2024). Deep history of cultural and linguistic evolution among central african hunter-gatherers. Nature Human Behaviour.
 Norman I. Platnick (1977). Cladistic methods in textual, linguistic, and phylogenetic analysis. Systematic Biology.
 Peter Robinson (2015). Four rules for the application of phylogenetics in the analysis of textual traditions. Digital Scholarship In The Humanities.
 Ilya Tëmkin (2007). Phylogenetics and material cultural evolution. Current Anthropology.
@@ -71,23 +70,20 @@ Deborah S. Rogers (2009). Inferring population histories using cultural data. Pr
 Jamshid J. Tehrani (2002). Investigating cultural evolution through biological phylogenetic analyses of turkmen textiles. Journal Of Anthropological Archaeology.
 Jamshid J. Tehrani (2013). Do transmission isolating mechanisms (trims) influence cultural evolution? Evidence from patterns of textile diversity within and between iranian tribal groups.. Durham Research Online (Durham University).
 Jamshid J. Tehrani (2010). The cophylogeny of populations and cultures: reconstructing the evolution of iranian tribal craft traditions using trees and jungles. Philosophical Transactions Of The Royal Society B Biological Sciences.
-Dimitrios Bountouridis (2017). Melodic similarity and applications using biologically-inspired techniques. Applied Sciences.
-Marcel Mongeau (1990). Comparison of musical sequences. Computers And The Humanities.
 Yuri Nishikawa (2022). Cultural transmission of traditional songs in the ryukyu archipelago. Plos One.
-Sam Passmore (2024). Global musical diversity is largely independent of linguistic and genetic histories. Nature Communications.
-Patrick E. Savage (2019). Cultural evolution of music. Palgrave Communications.
-Patrick E. Savage (2018). Automatic tune family identification by musical sequence alignment.. Zenodo (Cern European Organization For Nuclear Research).
-P. van Kranenburg (2012). A comparison between global and local features for computational classification of folk song melodies. Journal Of New Music Research.
-Yuri Nishikawa (2025). Exploring factors for melodic diversification of folk songs in the ryukyu archipelago. Evolutionary Human Sciences.
+Mike Kestemont (2022). Forgotten books: the application of unseen species models to the survival of culture. Science.
 Peter Robinson (2024). Philipp roelli, ed., handbook of stemmatology: history, methodology, digital approaches. Variants.
-Gabriel Aguirre‐Fernández (2020). Panpipes as units of cultural analysis and dispersal. Evolutionary Human Sciences.
+Stephen Shennan (2001). Demography and cultural innovation: a model and its implications for the emergence of modern human culture. Cambridge Archaeological Journal.
 Steven Brown (2013). Correlations in the population structure of music, genes and language. Proceedings Of The Royal Society B Biological Sciences.
 Elad Liebman (2012). A phylogenetic approach to music performance analysis. Journal Of New Music Research.
-Patrick E. Savage (2018). Alan lomax’s cantometrics project. Music & Science.
 H. F. Windram (2014). A phylogenetic analysis of orlando gibbons's prelude in g. Early Music.
 Mason Youngblood (2021). Phylogenetic reconstruction of the cultural evolution of electronic music via dynamic community detection (1975–1999). Evolution And Human Behavior.
-Patrick E. Savage (2014). Mapping music: cluster analysis of song-type frequencies within and between cultures. Ethnomusicology.
+Seungkyu Shin (2022). Evolutionary dynamics of cultural memes and application to massive movie data. Arxiv (Cornell University).
 Tom Rzeszutek (2011). The structure of cross-cultural musical diversity. Proceedings Of The Royal Society B Biological Sciences.
+Bret Beheim (2025). Opening strategies in the game of go from feudalism to superhuman ai. Evolutionary Human Sciences.
+Christopher J. Howe (2023). Manuscript traditions. Oxford University Press Ebooks.
+Nicholas Sparks (2022). The transmission of ‘the west saxon royal genealogy’: a phylogenetic approach. Digital Scholarship In The Humanities.
+Heather F. Windram (2022). A phylogenetic analysis of two preludes from &amp;#x2028;j. S. Bach’s <i>well-tempered clavier ii</i>. Early Music.
 
 
 CLUSTER 3
@@ -95,7 +91,6 @@ CLUSTER 3
 Folgert Karsdorp (2016). The structure and evolution of story networks. Royal Society Open Science.
 Salva Duran‐Nebreda (2022). Dilution of expertise in the rise and fall of collective innovation. Humanities And Social Sciences Communications.
 Cristian Jara-Figueroa (2019). How the medium shapes the message: printing and the rise of the arts and sciences. Plos One.
-Mike Kestemont (2022). Forgotten books: the application of unseen species models to the survival of culture. Science.
 Sergi Valverde (2016). Major transitions in information technology. Philosophical Transactions Of The Royal Society B Biological Sciences.
 Mason Youngblood (2019). Conformity bias in the cultural transmission of music sampling traditions. Royal Society Open Science.
 Peeter Tinits (2020). Open-ended cumulative cultural evolution of hollywood film crews. Evolutionary Human Sciences.
@@ -106,7 +101,6 @@ James M. Hughes (2012). Quantitative patterns of stylistic influence in the evol
 Lu Liu (2021). Understanding the onset of hot streaks across artistic, cultural, and scientific careers. Nature Communications.
 Lu Liu (2018). Hot streaks in artistic, cultural, and scientific careers. Nature.
 Matthew Salganik (2006). Experimental study of inequality and unpredictability in an artificial cultural market. Science.
-Artjoms Šeļa (2022). Semantics of european poetry is shaped by conservative forces: the relationship between poetic meter and meaning in accentual-syllabic verse. Plos One.
 Ricard V. Solé (2020). Evolving complexity: how tinkering shapes cells, software and ecological networks. Philosophical Transactions Of The Royal Society B Biological Sciences.
 Ricard V. Solé (2013). The evolutionary ecology of technological innovations. Complexity.
 Samuel P. Fraiberger (2018). Quantifying reputation and success in art. Science.
@@ -118,6 +112,8 @@ Janosov, Milan (2020). Elites, communities and the limited benefits of mentorshi
 Peter Klimek (2019). Fashion and art cycles are driven by counter-dominance signals of elite competition: quantitative evidence from music styles. Journal Of The Royal Society Interface.
 Colin Martindale (1983). Stylistic evolution in european music. Leonardo.
 Bernardo Monechi (2017). Significance and popularity in music production. Royal Society Open Science.
+Eita Nakamura (2019). Statistical evolutionary laws in music styles. Scientific Reports.
+Giacomo Negro (2022). Bustin’ out: the evolution of novelty and diversity in recorded music. Research In The Sociology Of Organizations.
 Doheum Park (2015). Topology and evolution of the network of western classical music composers. Epj Data Science.
 Dora P. Rosati (2021). Modelling song popularity as a contagious process. Proceedings Of The Royal Society A Mathematical Physical And Engineering Sciences.
 Matthew Salganik (2008). Leading the herd astray: an experimental study of self-fulfilling prophecies in an artificial cultural market. Social Psychology Quarterly.
@@ -125,7 +121,10 @@ Schneider, Lukas (2019). Five decades of us, uk, german and dutch music charts s
 Natalie C. Sinclair (2022). From beethoven to beyoncé: do changing aesthetic cultures amount to “cumulative cultural evolution?”. Frontiers In Psychology.
 John Ternovski (2019). Social complex contagion in music listenership: a natural experiment with 1.3 million participants. Social Networks.
 Alex van Venrooij (2015). A community ecology of genres. Poetics.
+Ch. Weiß (2018). Computational corpus analysis: a case study on jazz solos. Zenodo (Cern European Organization For Nuclear Research).
+Ch. Weiß (2018). Investigating style evolution of western classical music: a computational approach. Musicae Scientiae.
 Scott Westenberger (2021). Drifting to the top? Disentangling mechanisms influencing the turnover rate of popular music. Journal Of Mathematical Sociology.
+Mason Youngblood (2019). Cultural transmission modes of music sampling traditions remain stable despite delocalization in the digital age. Plos One.
 David W. Galenson (2000). Age and the quality of work: the case of modern american painters. Journal Of Political Economy.
 Maximilian Schich (2014). A network framework of cultural history. Science.
 Kathleen C. Oberlin (2015). Place and culture-making: geographic clumping in the emergence of artistic schools. Poetics.
@@ -139,27 +138,29 @@ Letian Zhang (2023). The fragility of artists’ reputations from 1795 to 2020. 
 Sameet Sreenivasan (2013). Quantitative analysis of the evolution of novelty in cinema through crowdsourced keywords. Scientific Reports.
 Amendola, Luca (2015). The evolving perception of controversial movies. Palgrave Communications.
 Burcu Yücesoy (2018). Success in books: a big data approach to bestsellers. Epj Data Science.
-Joseph P. Dexter (2017). Quantitative criticism of literary relationships. Proceedings Of The National Academy Of Sciences.
-Ted Underwood (2022). Cohort succession explains most change in literary culture. Sociological Science.
 Héloïse Vande Wiele (2016). The loss of poetic effects: from indeterminate to conventionalised meaning. Language And Literature International Journal Of Stylistics.
 Tessa Elizabeth Sadie Charlesworth (2022). Historical representations of social groups across 200 years of word embeddings from google books. Proceedings Of The National Academy Of Sciences.
 Charlie Pilgrim (2024). The rising entropy of english in the attention economy. Communications Psychology.
 Emilia Parada‐Cabaleiro (2024). Song lyrics have become simpler and more repetitive over the last five decades. Scientific Reports.
 Marta Ewa Lech (2025). Is it getting harder to make a hit? Evidence from 65 years of us music chart history. Epj Data Science.
+Fabian C. Moss (2024). Computational modeling of interval distributions in tonal space reveals paradigmatic stylistic changes in western music history. Humanities And Social Sciences Communications.
+Lucas Ferreira Colares (2024). Functional diversity in human song. Plos One.
 Khwan Kim (2024). Feature-based structures of opportunity: genre innovation in the american popular music industry, 1958 to 2016. American Sociological Review.
+Nathaniel Condit-Schultz (2017). Mcflow: a digital corpus of rap transcriptions. Empirical Musicology Review.
 Bernardo Monechi (2017). Waves of novelties in the expansion into the adjacent possible. Plos One.
 Noah Askin (2017). What makes popular culture popular? Product features and optimal differentiation in music. American Sociological Review.
 Katherine O’Toole (2023). Novelty and cultural evolution in modern popular music. Epj Data Science.
-Oleg Sobchuk (2025). Does literature evolve one funeral at a time?. Proceedings Of The Royal Society B Biological Sciences.
 Olivier Morin (2021). The shortlist effect: nestedness contributions as a tool to explain cultural success. Evolutionary Human Sciences.
 Oleg Sobchuk (2024). First-mover advantage in music. Epj Data Science.
 Olivier Morin (2018). Detecting wholesale copying in cultural evolution. Evolution And Human Behavior.
 Andres Karjus (2023). Compression ensembles quantify aesthetic complexity and the evolution of visual art. Epj Data Science.
+Markus Foramitti (2025). Societal crises disrupt long-term increases in stress, negativity, and simplicity in us billboard song lyrics from 1973 to 2023. Scientific Reports.
+Jonathan Warrell (2024). Latent evolutionary signatures: a general framework for analysing music and cultural evolution. Journal Of The Royal Society Interface.
+Egor Lappo (2023). Cultural transmission of move choice in chess. Proceedings Of The Royal Society B Biological Sciences.
 
 
 CLUSTER 4
 
-Eric Schniter (2017). Information transmission and the oral tradition: evidence of a late-life service niche for tsimane amerindians. Evolution And Human Behavior.
 Michelle Scalise Sugiyama (2001). Food, foragers, and folklore: the role of narrative in human subsistence. Evolution And Human Behavior.
 Polly Wiessner (2014). Embers of society: firelight talk among the ju/’hoansi bushmen. Proceedings Of The National Academy Of Sciences.
 Chris Buckley (2020). Japanese boatbuilders and the transmission of traditional culture. Evolutionary Anthropology Issues News And Reviews.
@@ -172,40 +173,64 @@ Lorenzo Bartalesi (2015). Beyond the nature-culture dichotomy: a proposal for ev
 Adam Brumm (2021). Oldest cave art found in sulawesi. Science Advances.
 Raymond Corbey (2016). The acheulean handaxe: more like a bird's song than a beatles' tune?. Evolutionary Anthropology Issues News And Reviews.
 Gerardo Gómez-Puerto (2017). Preference for curved contours across cultures.. Psychology Of Aesthetics Creativity And The Arts.
+Carmen Granito (2019). Style of pictorial representation is shaped by intergroup contact. Evolutionary Human Sciences.
 Derek Hodgson (2015). The visual brain and the early depiction of animals in europe and southeast asia. World Archaeology.
 Marek Kohn (1999). Handaxes: products of sexual selection?. Antiquity.
+Gauri R. Pradhan (2009). Why do females find ornaments attractive? The coercion-avoidance hypothesis. Biological Journal Of The Linnean Society.
+Richard O. Prum (2013). Coevolutionary aesthetics in human and biotic artworlds. Biology & Philosophy.
+David A. Puts (2010). Beauty and the beast: mechanisms of sexual selection in humans. Evolution And Human Behavior.
 Eveline Seghers (2014). Cross-species comparison in the evolutionary study of art: a cognitive approach to the ape art debate. Review Of General Psychology.
 Evelyne Seghers (2016). Proximate and ultimate factors in evolutionary thinking on art. Human Ethology.
-Stephen Shennan (2001). Demography and cultural innovation: a model and its implications for the emergence of modern human culture. Cambridge Archaeological Journal.
 Alexis De Tiège (2021). From animal signals to art: manipulative animal signaling and the evolutionary foundations of aesthetic behavior and art production. The Quarterly Review Of Biology.
 Jan Verpooten (2023). Do prestige and animacy matter to art experts? Exploring social learning, signaling, perceptual, and cognitive explanations. Empirical Studies Of The Arts.
 Jan Verpooten (2016). The conundrum of modern art. Human Nature.
 Jan Verpooten (2010). Sensory exploitation and cultural transmission: the late emergence of iconic representations in human evolution. Theory In Biosciences.
 Richard Walker (2021). Stabilization of cultural innovations depends on population density: testing an epidemiological model of cultural evolution against a global dataset of rock art sites and climate-based estimates of ancient population densities. Plos One.
-Robert M. MacCallum (2012). Evolution of music by public choice. Proceedings Of The National Academy Of Sciences.
-Matthias Mauch (2015). The evolution of popular music: usa 1960–2010. Royal Society Open Science.
-Hadi T. Nia (2015). The evolution of air resonance power efficiency in the violin and its ancestors. Proceedings Of The Royal Society A Mathematical Physical And Engineering Sciences.
+Geoffrey F. Miller (1999). Evolution of human music through sexual selection. The Mit Press Ebooks.
 Jan Verpooten (2023). Signalling and the cultural evolution of art. Oxford University Press Ebooks.
 Gillian Morriss‐Kay (2009). The evolution of human artistic creativity. Journal Of Anatomy.
-Seungkyu Shin (2022). Evolutionary dynamics of cultural memes and application to massive movie data. Arxiv (Cornell University).
 Michelle Scalise Sugiyama (2001). Narrative theory and function: why evolution matters. Philosophy And Literature.
 N.-Han Tran (2021). Limited scope for group coordination in stylistic variations of kolam art. Frontiers In Psychology.
 Bret Beheim (2014). Strategic social learning and the population dynamics of human behavior: the game of go. Evolution And Human Behavior.
+Helena Miton (2019). When iconicity stands in the way of abbreviation: no zipfian effect for figurative signals. Plos One.
 Roope Oskari Kaaronen (2024). A global cross-cultural analysis of string figures reveals evidence of deep transmission and innovation. Journal Of The Royal Society Interface.
 
 
 CLUSTER 5
 
+Gabriel Aguirre‐Fernández (2021). Cultural macroevolution of musical instruments in south america. Humanities And Social Sciences Communications.
 Henry Johnson (2024). An ethnomusicology of musical instruments: form, function, and meaning. Oxford University Research Archive (Ora) (University Of Oxford).
+Dimitrios Bountouridis (2017). Melodic similarity and applications using biologically-inspired techniques. Applied Sciences.
+Marcel Mongeau (1990). Comparison of musical sequences. Computers And The Humanities.
+Patrick E. Savage (2019). Cultural evolution of music. Palgrave Communications.
+Patrick E. Savage (2018). Automatic tune family identification by musical sequence alignment.. Zenodo (Cern European Organization For Nuclear Research).
+P. van Kranenburg (2012). A comparison between global and local features for computational classification of folk song melodies. Journal Of New Music Research.
+Gabriel Aguirre‐Fernández (2020). Panpipes as units of cultural analysis and dispersal. Evolutionary Human Sciences.
+Robert M. MacCallum (2012). Evolution of music by public choice. Proceedings Of The National Academy Of Sciences.
+Matthias Mauch (2015). The evolution of popular music: usa 1960–2010. Royal Society Open Science.
+Bruno Netti (2006). Response to victor grauer: on the concept of evolution in the history of ethnomusicology. The World Of Music/The World Of Music.
+Hadi T. Nia (2015). The evolution of air resonance power efficiency in the violin and its ancestors. Proceedings Of The Royal Society A Mathematical Physical And Engineering Sciences.
+Matthew Rahaim (2006). What else do we say when we say "music evolves?". The World Of Music/The World Of Music.
+Patrick E. Savage (2018). Alan lomax’s cantometrics project. Music & Science.
+Patrick E. Savage (2014). Mapping music: cluster analysis of song-type frequencies within and between cultures. Ethnomusicology.
+Hwan‐Ching Tai (2018). Acoustic evolution of old italian violins from amati to stradivari. Proceedings Of The National Academy Of Sciences.
+Claudia Fritz (2017). Listener evaluations of new and old italian violins. Proceedings Of The National Academy Of Sciences.
+
+
+CLUSTER 6
+
+Cecilia Padilla‐Iglesias (2024). Deep history of cultural and linguistic evolution among central african hunter-gatherers. Nature Human Behaviour.
+Sam Passmore (2024). Global musical diversity is largely independent of linguistic and genetic histories. Nature Communications.
+Patrick E. Savage (2022). Sequence alignment of folk song melodies reveals cross-cultural regularities of musical evolution. Current Biology.
+Yuri Nishikawa (2025). Exploring factors for melodic diversification of folk songs in the ryukyu archipelago. Evolutionary Human Sciences.
+Sally E. Street (2022). The role of population size in folk tune complexity. Humanities And Social Sciences Communications.
 W. Tecumseh Fitch (2006). The biology and evolution of music: a comparative perspective. Cognition.
 W. Tecumseh Fitch (2015). Four principles of bio-musicology. Philosophical Transactions Of The Royal Society B Biological Sciences.
 Edward H. Hagen (2003). Music and dance as a coalition signaling system. Human Nature.
 Edward H. Hagen (2009). Did neanderthals and other early humans sing? Seeking the biological roots of music in the territorial advertisements of primates, lions, hyenas, and wolves. Musicae Scientiae.
 Richard J. Johnson (2020). Upper paleolithic figurines showing women with obesity may represent survival symbols of climatic change. Obesity.
-Gauri R. Pradhan (2009). Why do females find ornaments attractive? The coercion-avoidance hypothesis. Biological Journal Of The Linnean Society.
-Richard O. Prum (2013). Coevolutionary aesthetics in human and biotic artworlds. Biology & Philosophy.
-David A. Puts (2010). Beauty and the beast: mechanisms of sexual selection in humans. Evolution And Human Behavior.
 Joshua Albrecht (2012). A statistical approach to tracing the historical development of major and minor pitch distributions, 1400-1750. Music Perception An Interdisciplinary Journal.
+Manuel Anglada-Tort (2017). The repeated recording illusion. Music Perception An Interdisciplinary Journal.
 Steven Brown (2011). Universals in the world’s musics. Psychology Of Music.
 Yuri Broze (2013). Diachronic changes in jazz harmony. Music Perception An Interdisciplinary Journal.
 Patrick Georges (2017). Western classical music development: a statistical analysis of composers similarity, differentiation and evolution. Scientometrics.
@@ -214,61 +239,42 @@ Patricia M. Gray (2001). The music of nature and the nature of music. Science.
 Daniel Harasim (2021). Exploring the foundations of tonality: statistical cognitive modeling of modes in the history of western classical music. Humanities And Social Sciences Communications.
 Henkjan Honing (2018). Musicality as an upbeat to music: introduction and research agenda. The Mit Press Ebooks.
 Henkjan Honing (2015). Without it no music: cognition, biology and evolution of musicality. Philosophical Transactions Of The Royal Society B Biological Sciences.
+Nori Jacoby (2017). Integer ratio priors on musical rhythm revealed cross-culturally by iterated reproduction. Current Biology.
 Christopher T. Kello (2017). Hierarchical temporal structure in music, speech and animal vocalizations: jazz is like a conversation, humpbacks sing like hermit thrushes. Journal Of The Royal Society Interface.
+Harin Lee (2021). Cross-cultural mood perception in pop songs and its alignment with mood detection algorithms. Arxiv (Cornell University).
+Massimo Lumaca (2017). Cultural transmission and evolution of melodic structures in multi-generational signaling games. Artificial Life.
+J. Michael McBride (2023). Convergent evolution in a large cross-cultural database of musical scales. Plos One.
 Samuel A. Mehr (2020). Origins of music in credible signaling. Behavioral And Brain Sciences.
-Geoffrey F. Miller (1999). Evolution of human music through sexual selection. The Mit Press Ebooks.
+Samuel A. Mehr (2019). Universality and diversity in human song. Science.
+Samuel A. Mehr (2018). Form and function in human song. Current Biology.
+Helena Miton (2020). Motor constraints influence cultural evolution of rhythm. Proceedings Of The Royal Society B Biological Sciences.
 Rachel Mundy (2014). Evolutionary categories and musical style from adler to america. Journal Of The American Musicological Society.
-Eita Nakamura (2019). Statistical evolutionary laws in music styles. Scientific Reports.
-Bruno Netti (2006). Response to victor grauer: on the concept of evolution in the history of ethnomusicology. The World Of Music/The World Of Music.
 Aleksey Nikolsky (2020). The overlooked tradition of “personal music” and its place in the evolution of music. Frontiers In Psychology.
+Aniruddh D. Patel (2021). Where they sing solo: accounting for cross-cultural variation in collective music-making in theories of music evolution. Behavioral And Brain Sciences.
 Gamaliel Percino (2014). Instrumentational complexity of music genres and why simplicity sells. Plos One.
-Matthew Rahaim (2006). What else do we say when we say "music evolves?". The World Of Music/The World Of Music.
+Andrea Ravignani (2016). Musical evolution in the lab exhibits rhythmic universals. Nature Human Behaviour.
+Andrea Ravignani (2018). Evolving building blocks of rhythm: how human cognition creates music via cultural transmission. Annals Of The New York Academy Of Sciences.
 Pablo H. Rodríguez Zivic (2013). Perceptual basis of evolving western musical styles. Proceedings Of The National Academy Of Sciences.
+Tina Roeske (2020). Categorical rhythms are shared between songbirds and humans. Current Biology.
 Martin Rohrmeier (2015). Principles of structure building in music, language and animal song. Philosophical Transactions Of The Royal Society B Biological Sciences.
 Patrick E. Savage (2015). Statistical universals reveal the structures and functions of human music. Proceedings Of The National Academy Of Sciences.
 Patrick E. Savage (2020). Music as a coevolved system for social bonding. Behavioral And Brain Sciences.
 Patrick E. Savage (2017). Global music recordings support the motor constraint hypothesis for human and avian song contour. Music Perception An Interdisciplinary Journal.
 Joan Serrà (2012). Measuring the evolution of contemporary western popular music. Scientific Reports.
 Adam Tierney (2011). The motor origins of human and avian song structure. Proceedings Of The National Academy Of Sciences.
-Ch. Weiß (2018). Computational corpus analysis: a case study on jazz solos. Zenodo (Cern European Organization For Nuclear Research).
-Ch. Weiß (2018). Investigating style evolution of western classical music: a computational approach. Musicae Scientiae.
-Marko Juvan (2014). Taking darwin metaphorically and literally: genres and sciences in a survival struggle. Neohelicon.
-Fabian C. Moss (2024). Computational modeling of interval distributions in tonal space reveals paradigmatic stylistic changes in western music history. Humanities And Social Sciences Communications.
-Steven Jan (2018). “The two brothers”: reconciling perceptual-cognitive and statistical models of musical evolution. Frontiers In Psychology.
-
-
-CLUSTER 6
-
-Patrick E. Savage (2022). Sequence alignment of folk song melodies reveals cross-cultural regularities of musical evolution. Current Biology.
-Sally E. Street (2022). The role of population size in folk tune complexity. Humanities And Social Sciences Communications.
-Carmen Granito (2019). Style of pictorial representation is shaped by intergroup contact. Evolutionary Human Sciences.
-Manuel Anglada-Tort (2017). The repeated recording illusion. Music Perception An Interdisciplinary Journal.
-Nori Jacoby (2017). Integer ratio priors on musical rhythm revealed cross-culturally by iterated reproduction. Current Biology.
-Harin Lee (2021). Cross-cultural mood perception in pop songs and its alignment with mood detection algorithms. Arxiv (Cornell University).
-Massimo Lumaca (2017). Cultural transmission and evolution of melodic structures in multi-generational signaling games. Artificial Life.
-J. Michael McBride (2023). Convergent evolution in a large cross-cultural database of musical scales. Plos One.
-Samuel A. Mehr (2019). Universality and diversity in human song. Science.
-Samuel A. Mehr (2018). Form and function in human song. Current Biology.
-Helena Miton (2020). Motor constraints influence cultural evolution of rhythm. Proceedings Of The Royal Society B Biological Sciences.
-Giacomo Negro (2022). Bustin’ out: the evolution of novelty and diversity in recorded music. Research In The Sociology Of Organizations.
-Aniruddh D. Patel (2021). Where they sing solo: accounting for cross-cultural variation in collective music-making in theories of music evolution. Behavioral And Brain Sciences.
-Andrea Ravignani (2016). Musical evolution in the lab exhibits rhythmic universals. Nature Human Behaviour.
-Andrea Ravignani (2018). Evolving building blocks of rhythm: how human cognition creates music via cultural transmission. Annals Of The New York Academy Of Sciences.
-Tina Roeske (2020). Categorical rhythms are shared between songbirds and humans. Current Biology.
 Michael E. W. Varnum (2021). Why are song lyrics becoming simpler? A time series analysis of lyrical complexity in six decades of american popular music. Plos One.
 Tessa Verhoef (2021). Melodic universals emerge or are sustained through cultural evolution. Frontiers In Psychology.
-Mason Youngblood (2019). Cultural transmission modes of music sampling traditions remain stable despite delocalization in the digital age. Plos One.
 Thomas Müller (2018). Compression in cultural evolution: homogeneity and structure in the emergence and evolution of a large-scale online collaborative art project. Plos One.
-Lucas Ferreira Colares (2024). Functional diversity in human song. Plos One.
 Nori Jacoby (2024). Commonality and variation in mental representations of music revealed by a cross-cultural comparison of rhythm priors in 15 countries. Nature Human Behaviour.
 Lidya Yurdum (2023). Universal interpretations of vocal music. Proceedings Of The National Academy Of Sciences.
 Manuel Anglada-Tort (2023). Large-scale iterated singing experiments reveal oral transmission mechanisms underlying music evolution. Current Biology.
-Nathaniel Condit-Schultz (2017). Mcflow: a digital corpus of rap transcriptions. Empirical Musicology Review.
+Steven Jan (2018). “The two brothers”: reconciling perceptual-cognitive and statistical models of musical evolution. Frontiers In Psychology.
 Andrea Ravignani (2018). The evolution of musicality: what can be learned from language evolution research?. Frontiers In Neuroscience.
 Harin Lee (2025). Mechanisms of cultural diversity in urban populations. Nature Communications.
 Caitlyn Trevor (2024). Music as an evolved tool for socio-affective fiction. Emotion Review.
 Barbara Pavlek (2019). Ancient coin designs encoded increasing amounts of economic information over centuries. Journal Of Anthropological Archaeology.
-Helena Miton (2019). When iconicity stands in the way of abbreviation: no zipfian effect for figurative signals. Plos One.
+Mason Youngblood (2023). Cultural evolution and music. Oxford University Press Ebooks.
+Tudor Popescu (2024). Core principles of melodic organisation emerge from transmission chains with random melodies. Evolution And Human Behavior.
 
 
 CLUSTER 7
@@ -276,20 +282,21 @@ CLUSTER 7
 Jeremy G. Butler (2014). Statistical analysis of television style: what can numbers tell us about tv editing?. Cinema Journal.
 James E. Cutting (2015). Shot durations, shot classes, and the increased pace of popular movies. Projections.
 Franco Moretti (2000). The slaughterhouse of literature. Modern Language Quarterly.
+Artjoms Šeļa (2022). Semantics of european poetry is shaped by conservative forces: the relationship between poetic meter and meaning in accentual-syllabic verse. Plos One.
 James E. Cutting (2011). Quicker, faster, darker: changes in hollywood film over 75 years. I-Perception.
+Marko Juvan (2014). Taking darwin metaphorically and literally: genres and sciences in a survival struggle. Neohelicon.
+Joseph P. Dexter (2017). Quantitative criticism of literary relationships. Proceedings Of The National Academy Of Sciences.
+Ted Underwood (2022). Cohort succession explains most change in literary culture. Sociological Science.
 Alexander Manshel (2020). The lag: technology and fiction in the twentieth century. Pmla/Publications Of The Modern Language Association Of America.
 Nicholas Paige (2017). Examples, samples, signs: an artifactual view of fictionality in the french novel, 1681–1830. New Literary History.
 Hoyt Long (2016). Turbulent flow. Modern Language Quarterly.
 Melanie Conroy (2014). Before the “inward turn”: tracing represented thought in the french novel (1800-1929). Poetics Today.
 Felix Muzny (2017). Dialogism in the novel: a computational model of the dialogic nature of narration and quotations. Digital Scholarship In The Humanities.
+Oleg Sobchuk (2025). Does literature evolve one funeral at a time?. Proceedings Of The Royal Society B Biological Sciences.
 James E. Cutting (2016). The evolution of pace in popular movies. Cognitive Research Principles And Implications.
 James E. Cutting (2011). Visual activity in hollywood film: 1935 to 2005 and beyond.. Psychology Of Aesthetics Creativity And The Arts.
 James E. Cutting (2011). The changing poetics of the dissolve in hollywood film. Empirical Studies Of The Arts.
-
-
-CLUSTER 8
-
-Hwan‐Ching Tai (2018). Acoustic evolution of old italian violins from amati to stradivari. Proceedings Of The National Academy Of Sciences.
-Claudia Fritz (2017). Listener evaluations of new and old italian violins. Proceedings Of The National Academy Of Sciences.
+Oleg Sobchuk (2023). Evolution of modern literature and film. Oxford University Press Ebooks.
+Artjom Shelya (2017). The shortest species: how the length of russian poetry changed (1750–1921). Studia Metrica Et Poetica.
 
 

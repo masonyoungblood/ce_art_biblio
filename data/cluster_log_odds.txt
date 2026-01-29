@@ -1,0 +1,28 @@
+CLUSTER 1
+
+legends, selection, fiction, bias, emotional
+
+CLUSTER 2
+
+phylogenetic, application, folktale, iranian, plains
+
+CLUSTER 3
+
+success, novelty, years, age, artificial
+
+CLUSTER 4
+
+art, selection, sexual, aesthetics, behavior
+
+CLUSTER 5
+
+music, musical, song, popular, analysis
+
+CLUSTER 6
+
+rhythm, universals, large, motor, musicality
+
+CLUSTER 7
+
+film, novel, hollywood, literature, popular
+

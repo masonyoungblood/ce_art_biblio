@@ -47,8 +47,9 @@ for(x in 1:nrow(collect_data)){
 
 #manually add the missing ones
 works[[2]] <- list(oa_fetch(entity = "works", identifier = "https://openalex.org/W2973262226", output = "list"))
-works[[19]] <- list(oa_fetch(entity = "works", identifier = "https://openalex.org/W1972390081", output = "list"))
-works[[22]] <- list(oa_fetch(entity = "works", identifier = "https://openalex.org/W2097315895", output = "list"))
+works[[15]] <- list(oa_fetch(entity = "works", identifier = "https://openalex.org/W4414174719", output = "list"))
+works[[40]] <- list(oa_fetch(entity = "works", identifier = "https://openalex.org/W2485862486", output = "list"))
+works[[43]] <- list(oa_fetch(entity = "works", identifier = "https://openalex.org/W2742364061", output = "list"))
 
 #convert works into a data table that includes referenced works
 new_works_proc <- rbindlist(lapply(works, function(x){

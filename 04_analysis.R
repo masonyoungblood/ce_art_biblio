@@ -13,6 +13,11 @@ library(htmlwidgets)
 library(parallel)
 library(stringdist)
 library(patchwork)
+library(quanteda)
+library(tidylo)
+library(dplyr)
+library(cowplot)
+library(ggrepel)
 
 #load processed works object
 load("data/works_proc_final.RData")
@@ -43,13 +48,100 @@ network <- induced_subgraph(network, V(network)[comps$membership == which.max(co
 
 #cluster with fast greedy algorithm
 set.seed(12345)
-clusters <- cluster_louvain(network, weights = E(network)$weight, resolution = 1.3)
-#clusters$names
-#table(clusters$membership)
+clusters <- cluster_louvain(network, weights = E(network)$weight, resolution = 1.38)
+table(clusters$membership)
+
+#get the text for log odds, abstracts for those that have, and otherwise titles
+temp <- oa_fetch(entity = "works", identifier = works_proc$id, output = "list")
+dois <- rep(NA, length(temp))
+for(x in 1:length(temp)){
+  temp_temp <- temp[[x]]$doi
+  if(!is.null(temp_temp)){
+    dois[x] <- temp_temp
+  }
+}
+dois <- gsub("https://doi.org/", "", dois)
+text_for_log_odds <- c()
+for(i in 1:length(dois)){
+  if(is.na(dois[i])){
+    text_for_log_odds[i] <- NA
+  } else {
+    text_for_log_odds[i] <- tryCatch({
+      cr_abstract(dois[i])
+    }, error = function(e) {
+      return(NA) 
+    })
+  }
+}
+text_for_log_odds[which(is.na(text_for_log_odds))] <- works_proc$title[which(is.na(text_for_log_odds))]
+
+#get weighted log odds for each cluster
+lemma_table <- lexicon::hash_lemmas
+lemma_table <- rbind(lemma_table, data.frame(token = "musical", lemma = "music"))
+log_odds <- list()
+for(x in 1:7){
+  pubs <- clusters$names[which(clusters$membership == x)]
+  inds <- match(pubs, works_proc$id)
+  words <- tokens(corpus(tolower(text_for_log_odds[inds])), remove_punct = TRUE, remove_numbers = TRUE, split_hyphens = TRUE, remove_symbols = TRUE)
+  words <- as.tokens(lapply(words, function(x){textstem::lemmatize_words(tolower(x), dictionary = lemma_table)}))
+  words <- as.tokens(lapply(words, function(x){x[which(is.na(as.numeric(x)))]}))
+  words <- tokens_remove(words, c(stopwords("english"), "cultural", "evolution", "using", "among", "old", "new", "iranian", "build", "italian", "say", "cross", "large", "scale", "use", "culture", "principle", "matter", "density", "application", "investigate"))
+  words <- tidyr::pivot_longer(convert(dfm(words), to = "data.frame"), cols = 2:ncol(convert(dfm(words), to = "data.frame")))
+  log_odds[[x]] <- cbind(cluster = x, words %>% group_by(word = name) %>% summarise(n = sum(value)) %>% arrange(desc(n)))
+}
+log_odds <- bind_log_odds(rbindlist(log_odds), set = cluster, feature = word, n = n, unweighted = TRUE)
+top_words <- log_odds %>% group_by(cluster) %>% arrange(cluster, desc(log_odds_weighted))
+top_words <- top_words %>% group_split()
+top_words <- lapply(top_words, function(x){x$word[1:10]})
+log_odds <- list(log_odds = log_odds, top_words = top_words)
+save(log_odds, file = "data/log_odds.RData")
+
+#create function to produce word plots
+word_plot <- function(data, n_to_plot = 10, cluster = 1, max_overlaps = 50, color = "black", title = "Title"){
+  plot_data <- data.frame(data)[which(data$cluster == cluster), ]
+  plot_data <- plot_data[order(plot_data$log_odds_weighted, decreasing = TRUE)[1:n_to_plot], ]
+  ggplot(data = plot_data, aes(x = n, y = log_odds_weighted, label = word)) + 
+    geom_text_repel(size = 3, force = 7, direction = "both", max.iter = 1000000, max.overlaps = max_overlaps, family = "Avenir", color = color, fontface = "bold", segment.size = 0.3) + 
+    labs(x = NULL, y = NULL, title = title) + 
+    scale_x_continuous(expand = expansion(mult = 0.2)) + 
+    scale_y_continuous(expand = expansion(mult = 0.2)) + 
+    theme_linedraw(base_family = "Avenir") + 
+    theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), plot.title = element_text(color = color, face = "bold"))
+}
+
+#set colors and create plot
+colors <- c("#0072B2", "#D55E00", "#009E73", "#CC79A7", "#D5C711", "#56B4E9", "#E69F00")
+plot <- plot_grid(
+  plot_grid(
+    word_plot(log_odds$log_odds, cluster = 1, color = colors[1], title = "Narrative evolution"),
+    word_plot(log_odds$log_odds, cluster = 2, color = colors[2], title = "Cultural phylogenetics"),
+    word_plot(log_odds$log_odds, cluster = 3, color = colors[3], title = "Big data"),
+    word_plot(log_odds$log_odds, cluster = 4, color = colors[4], title = "Evolutionary origins"),
+    nrow = 1
+  ),
+  plot_grid(
+    word_plot(log_odds$log_odds, cluster = 5, color = colors[5], title = "CE of music"),
+    word_plot(log_odds$log_odds, cluster = 6, color = colors[6], title = "Biology of music"),
+    word_plot(log_odds$log_odds, cluster = 7, color = colors[7], title = "Film and literature"),
+    nrow = 1
+  ),
+  nrow = 2
+)
+
+#save plot
+set.seed(1234); svg("output/log_odds.svg", width = 10, height = 5); plot; dev.off()
+
+#export them to a text file
+out_file <- file("data/cluster_log_odds.txt", "w")
+for(x in 1:7){
+  writeLines(paste0("CLUSTER ", x, "\n"), out_file)
+  writeLines(paste0(paste0(top_words[[x]], collapse = ", "), "\n"), out_file)
+}
+close(out_file)
 
 #save cluster details
 out_file <- file("data/cluster_details.txt", "w")
-for(x in 1:8){
+for(x in 1:7){
   writeLines(paste0("CLUSTER ", x, "\n"), out_file)
   pubs <- clusters$names[which(clusters$membership == x)]
   inds <- match(pubs, works_proc$id)
@@ -61,24 +153,12 @@ for(x in 1:8){
 }
 close(out_file)
 
-#gemini 3 pro
-#Write short descriptions of these clusters of publications on cultural evolution of the arts, to be used as subfield labels.
-labels <- c(
-  "Narrative evolution",
-  "Cultural phylogenetics",
-  "Big data",
-  "Evolutionary origins and adaptation",
-  "Biology of music",
-  "Cultural evolution of music",
-  "Dynamics of film and literature"
-)
-
 #get large clusters
 large_cluster_ids <- which(sizes(clusters) >= 10)
 
 #manage colors
 node_colors <- rep("gray50", vcount(network))
-palette <- c("#0072B2", "#D55E00", "#009E73", "#CC79A7", "#F0E442", "#56B4E9", "#E69F00")
+palette <- c("#0072B2", "#D55E00", "#009E73", "#CC79A7", "#D5C711", "#56B4E9", "#E69F00")
 color_map <- setNames(palette, large_cluster_ids)
 membership <- membership(clusters)
 nodes_in_large_clusters <- which(membership(clusters) %in% large_cluster_ids)
@@ -118,7 +198,7 @@ cluster_freq_table <- do.call(rbind, lapply(1:7, function(x){
   data.frame(
     table(works_proc$year[which(works_proc$id %in% clusters$names[which(clusters$membership == x)])]), 
     cluster = x,
-    color = c("#0072B2", "#D55E00", "#009E73", "#CC79A7", "#F0E442", "#56B4E9", "#E69F00")[x]
+    color = c("#0072B2", "#D55E00", "#009E73", "#CC79A7", "#D5C711", "#56B4E9", "#E69F00")[x]
   )
 }))
 colnames(cluster_freq_table) <- c("year", "frequency", "cluster", "color")
@@ -134,15 +214,8 @@ freq_table$label <- sapply(freq_table$year, function(x){
   paste(paste0(sapply(works_proc$author[inds], function(x){x[1]}), " (", works_proc$year[inds], "). ", works_proc$title[inds], ". ", works_proc$source[inds], "."), collapse = "\n")
 })
 
-#create data frame of labels
-labels_df <- data.frame(
-  x = 0, y = c(0.98, 0.94, 0.90, 0.86, 0.82, 0.78, 0.74),
-  label = labels,
-  fill_color = c("#0072B2", "#D55E00", "#009E73", "#CC79A7", "#F0E442", "#56B4E9", "#E69F00"), hjust = 0
-)
-
 #plot graph
-plot_a <- ggraph(create_layout(network, layout = layout)) + 
+plot_a <- ggraph(create_layout(network, layout = layout_df)) + 
   geom_edge_arc(aes(alpha = log(weight)), strength = 0.1) + 
   geom_node_point(aes(color = color)) + 
   geom_point_interactive(data = layout_df, aes(x = x, y = y, color = color, tooltip = label)) + 
@@ -152,26 +225,15 @@ plot_a <- ggraph(create_layout(network, layout = layout)) +
   scale_y_continuous(limits = c(-0.1, 1.01), expand = c(0, 0)) +
   theme_graph(base_family = "Helvetica") + 
   theme(legend.position = "none", plot.margin = unit(c(0, 0, 0, 0), "pt"))
-plot_b <- ggplot(freq_table) + 
-  geom_point_interactive(aes(x = year, y = frequency, tooltip = label)) + 
+plot_b <- ggplot(freq_table, aes(x = year, y = frequency)) + 
+  geom_smooth(fill = "#009E73", color = "#009E73", linewidth = 0.5, alpha = 0.2) + 
+  geom_point(color = "#009E73") + 
   scale_x_continuous(breaks = seq(1900, 2020, 20)) +
+  scale_y_continuous(expand = c(0, 0)) + 
+  coord_cartesian(ylim = c(0, 31)) + 
   labs(x = "Year", y = "Publications") + 
   theme_linedraw(base_family = "Helvetica") + 
-  theme(panel.background = element_blank(), plot.background = element_blank(), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), plot.margin = unit(c(0, 0, 0, 0), "pt"))
-plot_c <- ggplot(labels_df) + 
-  geom_label_interactive(aes(x = x, y = y, label = label, fill = fill_color, hjust = hjust), color = "white") + 
-  scale_x_continuous(limits = c(0, 1), expand = c(0, 0)) +
-  scale_y_continuous(limits = c(0, 1), expand = c(0, 0)) +
-  scale_fill_identity() + 
-  theme_void(base_family = "Helvetica") + 
-  theme(plot.margin = unit(c(0, 0, 0, 0), "pt"))
-plot_d <- ggplot(cluster_freq_table) + 
-  geom_area(aes(x = year, y = frequency, fill = color)) + 
-  scale_x_continuous(breaks = seq(1975, 2025, 5)) +
-  scale_fill_identity() + 
-  labs(x = "Year", y = "Publications") + 
-  theme_linedraw(base_family = "Helvetica") + 
-  theme(panel.background = element_blank(), plot.background = element_blank(), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), plot.margin = unit(c(0, 0, 0, 0), "pt"))
+  theme(panel.background = element_blank(), panel.porder = element_blank(), axis.line = element_line(color = "black"), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), plot.margin = unit(c(0, 0, 0, 0), "pt"), panel.grid = element_blank())
 
 #https://patchwork.data-imaginist.com/reference/area.html
 layout_patchwork <- c(
@@ -180,14 +242,8 @@ layout_patchwork <- c(
   area(1, 1, 12, 20)
 )
 
-#create static plot
-plot <- free(plot_a) + free(plot_d) + free(plot_c) + plot_layout(design = layout_patchwork)
-
-#export static plot
-png("output/ce_art_biblio.png", width = 10, height = 5.5, units = "in", res = 600); plot; dev.off()
-svg("output/ce_art_biblio.svg", width = 10, height = 5.5); plot; dev.off()
-
 #export interactive plot
+plot <- free(plot_a)
 interactive_plot <- girafe(
   ggobj = plot, 
   fonts = list(sans = "Helvetica"), 
@@ -198,6 +254,17 @@ interactive_plot <- girafe(
   )
 )
 saveWidget(interactive_plot, file = "docs/index.html", selfcontained = TRUE)
+
+#create static plot
+pad <- 10
+plot <- plot_grid(
+  plot_a + xlim(0.12, 1) + ylim(0, 1) + theme(plot.margin = unit(c(pad, pad, pad, pad), "pt"), text = element_text(family = "Avenir")), 
+  plot_b + xlim(1962, 2026) + theme(plot.margin = unit(c(pad, pad, pad, pad), "pt"), text = element_text(family = "Avenir")), 
+  labels = "AUTO", rel_widths = c(60, 40)
+)
+
+#export static plot
+svg("output/ce_art_biblio.svg", width = 10, height = 4); plot; dev.off()
 
 # #export the top citations (and manually correct them later)
 # freq_table <- data.frame(sort(table(unlist(works_proc$references)), decreasing = TRUE)[2:41])
@@ -210,3 +277,30 @@ saveWidget(interactive_plot, file = "docs/index.html", selfcontained = TRUE)
 # })
 # freq_table <- freq_table[, c(2, 3)]
 # write.csv(freq_table, "output/top_20.csv")
+
+# #export all papers used (and manually correct the NULL authors)
+# temp <- paste0(
+#   sapply(works_proc$author, function(x){
+#     if(length(x) == 1){
+#       return(last(strsplit(x[1], " ")[[1]]))
+#     }
+#     if(length(x) == 2){
+#       return(paste0(last(strsplit(x[1], " ")[[1]]), " and ", last(strsplit(x[2], " ")[[1]])))
+#     }
+#     if(length(x) > 2){
+#       return(paste0(last(strsplit(x[1], " ")[[1]]), " et al."))
+#     }
+#   }), " (", 
+#   works_proc$year, "). ", 
+#   works_proc$title, ". ",
+#   works_proc$source, "."
+# )
+# temp <- gsub("\\\"", "", temp)
+# temp <- gsub("<i>", "", temp)
+# temp <- gsub("</i>", "", temp)
+# temp <- gsub("\u0098The \u009cWorld Of Music/\u0098The\u009c World Of Music", "The World of Music", temp)
+# temp <- gsub("&amp;#x2028;j", "J", temp)
+# temp <- sort(temp)
+# sink("output/analyzed_papers.txt")
+# writeLines(temp)
+# sink
