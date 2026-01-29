@@ -22,6 +22,9 @@ library(ggrepel)
 #load processed works object
 load("data/works_proc_final.RData")
 
+#203% growth between 2012 and 2022, compared to 59% globally in the same time period: https://ncses.nsf.gov/pubs/nsb202333
+((length(which(works_proc$year < 2023)) - length(which(works_proc$year < 2013)))/length(which(works_proc$year < 2013)))*100
+
 #define jaccard index
 jaccard <- function(vector_a, vector_b){
   if(length(vector_a) == 0 & length(vector_b) == 0){
