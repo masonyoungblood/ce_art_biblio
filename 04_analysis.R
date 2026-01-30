@@ -127,7 +127,7 @@ bar_plot <- ggplot(bar_data, aes(x = abbrev, y = count, fill = abbrev)) +
   labs(x = NULL, y = NULL, title = "Community sizes") + 
   scale_fill_manual(values = colors) + 
   scale_y_continuous(expand = c(0, 0)) + 
-  theme(legend.position = "none", panel.grid.minor = element_blank(), plot.title = element_text(face = "bold"), axis.text.y = element_text(angle = 90, hjust = 0.5))
+  theme(legend.position = "none", panel.grid.minor = element_blank(), plot.title = element_text(color = "gray60", face = "bold"), axis.text.y = element_text(angle = 90, hjust = 0.5))
 bar_plot
 
 # #first plot
