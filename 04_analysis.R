@@ -104,7 +104,7 @@ word_plot <- function(data, n_to_plot = 10, cluster = 1, max_overlaps = 50, colo
   plot_data <- data.frame(data)[which(data$cluster == cluster), ]
   plot_data <- plot_data[order(plot_data$log_odds_weighted, decreasing = TRUE)[1:n_to_plot], ]
   ggplot(data = plot_data, aes(x = n, y = log_odds_weighted, label = word)) + 
-    geom_text_repel(size = 3, force = 7, direction = "both", max.iter = 1000000, max.overlaps = max_overlaps, family = "Avenir", color = ifelse(text_black, "black", color), fontface = ifelse(text_bold, "bold", "plain"), segment.size = 0.3) + 
+    geom_text_repel(size = 3, force = 7, direction = "both", max.iter = 1000000, max.overlaps = max_overlaps, family = "Avenir", color = ifelse(text_black, "gray40", color), fontface = ifelse(text_bold, "bold", "plain"), segment.size = 0.3, segment.color = "gray40") + 
     labs(x = NULL, y = NULL, title = title) + 
     scale_x_continuous(expand = expansion(mult = 0.2), breaks = scales::breaks_pretty(n = 3)) + 
     scale_y_continuous(expand = expansion(mult = 0.2), breaks = scales::breaks_pretty(n = 3), labels = scales::label_number(accuracy = 0.1)) + 
@@ -115,27 +115,42 @@ word_plot <- function(data, n_to_plot = 10, cluster = 1, max_overlaps = 50, colo
 #set colors and create plot
 colors <- c("#0072B2", "#D55E00", "#009E73", "#CC79A7", "#D5C711", "#56B4E9", "#E69F00")
 
-#first plot
-plot <- plot_grid(
-  plot_grid(
-    word_plot(log_odds$log_odds, cluster = 1, color = colors[1], title = "Narrative evolution"),
-    word_plot(log_odds$log_odds, cluster = 2, color = colors[2], title = "Cultural phylogenetics"),
-    word_plot(log_odds$log_odds, cluster = 3, color = colors[3], title = "Big data"),
-    word_plot(log_odds$log_odds, cluster = 4, color = colors[4], title = "Evolutionary origins"),
-    nrow = 1
-  ),
-  plot_grid(
-    word_plot(log_odds$log_odds, cluster = 5, color = colors[5], title = "CE of music"),
-    word_plot(log_odds$log_odds, cluster = 6, color = colors[6], title = "Biology of music"),
-    word_plot(log_odds$log_odds, cluster = 7, color = colors[7], title = "Film and literature"),
-    nrow = 1
-  ),
-  nrow = 2
+#create plot of counts
+bar_data <- data.frame(
+  count = sapply(1:7, function(x){length(clusters$names[which(clusters$membership == x)])}),
+  abbrev = factor(c("NE", "CP", "BD", "EO", "CEM", "BM", "FL"), levels = c("NE", "CP", "BD", "EO", "CEM", "BM", "FL")),
+  colors = colors
 )
-set.seed(1234)
-svg("output/log_odds_a.svg", width = 10, height = 5)
-gridExtra::grid.arrange(plot, left = grid::textGrob("Weighted Log Odds", rot = 90, gp = grid::gpar(fontfamily = "Avenir", fontsize = 10)), bottom = grid::textGrob("Frequency", gp = grid::gpar(fontfamily = "Avenir", fontsize = 10)))
-dev.off()
+bar_plot <- ggplot(bar_data, aes(x = abbrev, y = count, fill = abbrev)) + 
+  geom_col(width = 0.5) + 
+  theme_linedraw(base_family = "Avenir") + 
+  labs(x = NULL, y = NULL, title = "Community sizes") + 
+  scale_fill_manual(values = colors) + 
+  scale_y_continuous(expand = c(0, 0)) + 
+  theme(legend.position = "none", panel.grid.minor = element_blank(), plot.title = element_text(face = "bold"), axis.text.y = element_text(angle = 90, hjust = 0.5))
+bar_plot
+
+# #first plot
+# plot <- plot_grid(
+#   plot_grid(
+#     word_plot(log_odds$log_odds, cluster = 1, color = colors[1], title = "Narrative evolution"),
+#     word_plot(log_odds$log_odds, cluster = 2, color = colors[2], title = "Cultural phylogenetics"),
+#     word_plot(log_odds$log_odds, cluster = 3, color = colors[3], title = "Big data"),
+#     word_plot(log_odds$log_odds, cluster = 4, color = colors[4], title = "Evolutionary origins"),
+#     nrow = 1
+#   ),
+#   plot_grid(
+#     word_plot(log_odds$log_odds, cluster = 5, color = colors[5], title = "CE of music"),
+#     word_plot(log_odds$log_odds, cluster = 6, color = colors[6], title = "Biology of music"),
+#     word_plot(log_odds$log_odds, cluster = 7, color = colors[7], title = "Film and literature")
+#     nrow = 1
+#   ),
+#   nrow = 2
+# )
+# set.seed(1234)
+# svg("output/log_odds_a.svg", width = 10, height = 5)
+# gridExtra::grid.arrange(plot, left = grid::textGrob("Weighted Log Odds", rot = 90, gp = grid::gpar(fontfamily = "Avenir", fontsize = 10)), bottom = grid::textGrob("Count", gp = grid::gpar(fontfamily = "Avenir", fontsize = 10)))
+# dev.off()
 
 #second plot
 plot <- plot_grid(
@@ -146,16 +161,13 @@ plot <- plot_grid(
   word_plot(log_odds$log_odds, cluster = 5, color = colors[5], text_black = TRUE, text_bold = FALSE, title = "CE of music"),
   word_plot(log_odds$log_odds, cluster = 6, color = colors[6], text_black = TRUE, text_bold = FALSE, title = "Biology of music"),
   word_plot(log_odds$log_odds, cluster = 7, color = colors[7], text_black = TRUE, text_bold = FALSE, title = "Film and literature"),
+  bar_plot,
   nrow = 2
 )
-set.seed(1234)
-svg("output/log_odds_b.svg", width = 10, height = 5)
-gridExtra::grid.arrange(plot, left = grid::textGrob("Weighted Log Odds", rot = 90, gp = grid::gpar(fontfamily = "Avenir", fontsize = 10)), bottom = grid::textGrob("Frequency", gp = grid::gpar(fontfamily = "Avenir", fontsize = 10)))
+set.seed(12345)
+svg("output/log_odds.svg", width = 10, height = 5)
+gridExtra::grid.arrange(plot, left = grid::textGrob("Weighted log odds", rot = 90, gp = grid::gpar(fontfamily = "Avenir", fontsize = 10)), bottom = grid::textGrob("Count", gp = grid::gpar(fontfamily = "Avenir", fontsize = 10)))
 dev.off()
-
-#save plot
-#set.seed(1234); svg("output/log_odds.svg", width = 10, height = 5); plot; dev.off()
-set.seed(1234); png("output/log_odds_bw.png", width = 10, height = 5, units = "in", res = 600); plot; dev.off()
 
 #export them to a text file
 out_file <- file("data/cluster_log_odds.txt", "w")
@@ -245,7 +257,7 @@ plot_a <- ggraph(create_layout(network, layout = layout_df)) +
   geom_edge_arc(aes(alpha = log(weight)), strength = 0.1) + 
   geom_node_point(aes(color = color)) + 
   geom_point_interactive(data = layout_df, aes(x = x, y = y, color = color, tooltip = label)) + 
-  scale_edge_alpha(range = c(0, 0.05)) +
+  scale_edge_alpha(range = c(0, 0.03)) +
   scale_color_identity() +
   scale_x_continuous(limits = c(-0.02, 1.01), expand = c(0, 0)) +
   scale_y_continuous(limits = c(-0.1, 1.01), expand = c(0, 0)) +
@@ -259,7 +271,8 @@ plot_b <- ggplot(freq_table, aes(x = year, y = frequency)) +
   coord_cartesian(ylim = c(0, 31)) + 
   labs(x = "Year", y = "Publications") + 
   theme_linedraw(base_family = "Helvetica") + 
-  theme(panel.background = element_blank(), panel.porder = element_blank(), axis.line = element_line(color = "black"), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), plot.margin = unit(c(0, 0, 0, 0), "pt"), panel.grid = element_blank())
+  theme(panel.background = element_blank(), panel.porder = element_blank(), axis.line = element_line(color = "black"), plot.margin = unit(c(0, 0, 0, 0), "pt"), panel.grid = element_blank())
+  #theme(panel.background = element_blank(), panel.porder = element_blank(), axis.line = element_line(color = "black"), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1), plot.margin = unit(c(0, 0, 0, 0), "pt"), panel.grid = element_blank())
 
 #https://patchwork.data-imaginist.com/reference/area.html
 layout_patchwork <- c(
